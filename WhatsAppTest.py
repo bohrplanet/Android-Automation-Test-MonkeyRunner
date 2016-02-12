@@ -28,7 +28,7 @@ device=MonkeyRunner.waitForConnection(5,'7255f2fc')
 #device.installPackage ('D:\\apk\\whatsapp.apk')
 
 #print operate infomation to log file.
-log.write("installing apkâ€¦â€¦\n")
+log.write("installing apk¡­¡­\n")
 
 #waiting 2 seconds.
 MonkeyRunner.sleep(2)
@@ -37,7 +37,7 @@ MonkeyRunner.sleep(2)
 device.startActivity(component='com.whatsapp/.Main')
 MonkeyRunner.sleep(2)
 #print operate information.
-log.write("Launching appâ€¦â€¦\n")
+log.write("Launching app¡­¡­\n")
 #take a picture
 result = device.takeSnapshot()
 #save picture
@@ -59,28 +59,28 @@ result1.writeToFile(path+'.png','png')
 
 #compare the picture to the right picture
 resultTrue=MonkeyRunner.loadImageFromFile('E:/right/right1.png')
-log.write("comparing pictureâ€¦â€¦\n")
+log.write("comparing picture¡­¡­\n")
 
 if(result.sameAs(resultTrue,0.9)):
     #print information
     print("success")
     #print information to file
-    log.write("successâ€¦â€¦\n")
+    log.write("success¡­¡­\n")
 else:
     #print information
     print("fail")
-    log.write("failâ€¦â€¦\n")
+    log.write("fail¡­¡­\n")
 
 #compare the picture to the right picture
 resultTrue2=MonkeyRunner.loadImageFromFile('E:/right/right2.png')
-log.write("comparing pictureâ€¦â€¦\n")
+log.write("comparing picture¡­¡­\n")
 
 if(result1.sameAs(resultTrue2,0.9)):
     #print information
     print("success")
     #print information to file
-    log.write("("successâ€¦â€¦\n")
+    log.write("success¡­¡­\n")
 else:
     #print information
     print("fail")
-    log.write("failâ€¦â€¦\n")
+    log.write("fail¡­¡­\n")
